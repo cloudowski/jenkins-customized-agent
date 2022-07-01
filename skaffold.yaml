@@ -1,0 +1,12 @@
+apiVersion: skaffold/v2beta28
+kind: Config
+
+build:
+  artifacts:
+    - image: cloudowski/custom-jenkins-agent
+      docker: {}
+  local:
+    push: true
+  tagPolicy:
+    customTemplate:
+      template: "0.1.7"
